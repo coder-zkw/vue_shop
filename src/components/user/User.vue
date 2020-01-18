@@ -1,6 +1,6 @@
 <template>
     <div class="user">
-        <breadcrumb/>
+        <breadcrumb :position="{navFir: '用户管理', navTwo: '用户列表'}"/>
         <el-card class="box-card">
             <div style="margin-top: 15px;">
                 <el-row :gutter="20">
