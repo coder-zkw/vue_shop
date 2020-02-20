@@ -6,6 +6,7 @@ import store from './store'
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
+import TreeTable from 'vue-table-with-tree-grid'
 
 import '@/assets/css/base.css'
 
@@ -30,6 +31,8 @@ axios.interceptors.request.use(config => {
 Vue.prototype.$http = axios
 
 Vue.config.productionTip = false
+// 注册为全局可用组件。同Vue.use
+Vue.component('tree-table', TreeTable)
 
 new Vue({
   router,

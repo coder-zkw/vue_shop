@@ -57,8 +57,10 @@ export default {
       this.$router.push('/login')
     },
     async getMenuList () {
+      // 获取导航信息
       const { data: res } = await this.$http.get('menus')
       this.menuList = res.data
+      // console.log(res.data) 导航信息，导航名称，路径。。。
     },
     toggle_collapse () {
       this.isCollapse = !this.isCollapse
